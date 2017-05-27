@@ -3,9 +3,6 @@
 namespace TransducersNet
 {
     public static class Composer {
-        public static IComposer<T,T> Compose<T,T>(ITransducer<T,T> transducer) {
-            return new Composer<T,T>(transducer);
-        }
 
         public static IComposer<TOut,TIn> Compose<TOut,TIn>(ITransducer<TOut,TIn> transducer) {
             return new Composer<TOut,TIn>(transducer);
